@@ -1,0 +1,62 @@
+.meeting-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px;
+  margin-bottom: 10px;
+  background: #1a2035;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  transition: all 0.2s;
+}
+
+.meeting-card:hover {
+  background: #1e2540;
+  border-color: rgba(99, 102, 241, 0.25);
+  transform: translateX(3px);
+}
+
+.meeting-card-left {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.meeting-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #4f46e5, #7c3aed);
+  flex-shrink: 0;
+  box-shadow: 0 0 8px rgba(79, 70, 229, 0.5);
+}
+
+.meeting-card-info h3 {
+  font-size: 14px;
+  font-weight: 600;
+  color: #e5e7eb;
+  margin-bottom: 3px;
+}
+
+.meeting-card-info p {
+  font-size: 12px;
+  color: #4b5563;
+}
+
+.meeting-card button {
+  background: rgba(79, 70, 229, 0.12);
+  color: #818cf8;
+  border: 1px solid rgba(79, 70, 229, 0.2);
+  padding: 7px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 600;
+  transition: 0.2s;
+  white-space: nowrap;
+}
+
+.meeting-card button:hover {
+  background: rgba(79, 70, 229, 0.25);
+  color: #fff;
+}

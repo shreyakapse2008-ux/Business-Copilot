@@ -1,0 +1,758 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Inter","Poppins",Arial,sans-serif;
+}
+
+
+body{
+    overflow:hidden;
+}
+
+
+/* MAIN BACKGROUND */
+
+.premium-login{
+
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    position:relative;
+    overflow:hidden;
+
+    background:
+    linear-gradient(
+        135deg,
+        #0F62FE,
+        #2563EB,
+        #3B82F6,
+        #60A5FA
+    );
+
+    background-size:400% 400%;
+    animation:gradientMove 12s ease infinite;
+
+}
+
+
+/* Gradient Animation */
+
+@keyframes gradientMove{
+
+    0%{
+        background-position:0% 50%;
+    }
+
+    50%{
+        background-position:100% 50%;
+    }
+
+    100%{
+        background-position:0% 50%;
+    }
+
+}
+
+
+
+/* Floating Background Circles */
+
+
+.bg-circle{
+
+    position:absolute;
+    border-radius:50%;
+
+    filter:blur(70px);
+
+    opacity:.45;
+
+    animation:floating 8s infinite alternate;
+
+}
+
+
+.circle-one{
+
+    width:300px;
+    height:300px;
+
+    background:#ffffff;
+
+    top:-100px;
+    left:-100px;
+
+}
+
+
+.circle-two{
+
+    width:350px;
+    height:350px;
+
+    background:#93C5FD;
+
+    right:-120px;
+    bottom:-100px;
+
+}
+
+
+.circle-three{
+
+    width:200px;
+    height:200px;
+
+    background:#1D4ED8;
+
+    top:40%;
+    left:10%;
+
+}
+
+
+
+@keyframes floating{
+
+    from{
+
+        transform:translateY(0px);
+
+    }
+
+    to{
+
+        transform:translateY(40px);
+
+    }
+
+}
+
+
+
+/* LOGIN CARD */
+
+
+.login-glass{
+
+
+    width:430px;
+
+    padding:40px;
+
+
+    border-radius:30px;
+
+
+    background:
+    rgba(255,255,255,.85);
+
+
+    backdrop-filter:blur(25px);
+
+
+    box-shadow:
+
+    0 30px 80px rgba(0,0,0,.25);
+
+
+    position:relative;
+
+    z-index:2;
+
+
+    animation:borderGlow 5s linear infinite;
+
+
+}
+
+
+
+/* Animated Border */
+
+.login-glass::before{
+
+
+    content:"";
+
+    position:absolute;
+
+    inset:-2px;
+
+    border-radius:32px;
+
+
+    background:
+
+    linear-gradient(
+        45deg,
+        #0F62FE,
+        #60A5FA,
+        #2563EB
+    );
+
+
+    z-index:-1;
+
+
+}
+
+
+
+/* LOGO */
+
+.logo-section{
+
+    text-align:center;
+
+}
+
+
+
+.logo-ring{
+
+
+    width:95px;
+    height:95px;
+
+
+    margin:auto;
+
+
+    border-radius:50%;
+
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+
+    background:
+
+    radial-gradient(
+        circle,
+        #60A5FA,
+        #2563EB
+    );
+
+
+    box-shadow:
+
+    0 0 40px #2563EB;
+
+
+}
+
+
+
+.login-logo{
+
+
+    width:70px;
+    height:70px;
+
+    object-fit:contain;
+
+
+}
+
+
+
+.ai-badge{
+
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:6px;
+
+
+    margin-top:18px;
+
+
+    padding:6px 14px;
+
+
+    border-radius:20px;
+
+
+    background:#111827;
+
+
+    color:#2563EB;
+
+
+    font-size:13px;
+
+    font-weight:600;
+
+
+}
+
+
+
+.logo-section h1{
+
+
+    margin-top:15px;
+
+
+    font-size:32px;
+
+
+    color:#111827;
+
+
+}
+
+
+
+.logo-section p{
+
+
+    color:#64748B;
+
+    margin-top:5px;
+
+}
+
+
+
+/* Welcome */
+
+
+.welcome{
+
+
+    text-align:center;
+
+
+    margin:30px 0;
+
+
+}
+
+
+
+.welcome h2{
+
+
+    font-size:25px;
+
+    color:#111827;
+
+
+}
+
+
+
+.welcome p{
+
+
+    margin-top:10px;
+
+
+    color:#64748B;
+
+    font-size:14px;
+
+
+}
+
+
+
+/* INPUT */
+
+
+.input-box{
+
+
+    position:relative;
+
+
+    margin-bottom:22px;
+
+
+}
+
+
+
+.input-box svg{
+
+
+    position:absolute;
+
+
+    left:18px;
+
+    top:50%;
+
+
+    transform:translateY(-50%);
+
+
+    color:#2563EB;
+
+
+}
+
+
+
+.input-box input{
+
+
+    width:100%;
+
+
+    padding:16px 50px;
+
+
+    border-radius:18px;
+
+
+    border:1px solid #CBD5E1;
+
+
+    outline:none;
+
+
+    font-size:15px;
+
+
+    background:black;
+
+
+    transition:.3s;
+
+
+}
+
+
+
+.input-box input:focus{
+
+
+    border-color:#2563EB;
+
+
+    box-shadow:
+
+    0 0 15px rgba(37,99,235,.35);
+
+
+}
+
+
+
+.input-box label{
+
+
+    position:absolute;
+
+
+    left:50px;
+
+
+    top:50%;
+
+
+    transform:translateY(-50%);
+
+
+    color:#94A3B8;
+
+
+    pointer-events:none;
+
+
+    transition:.3s;
+
+
+}
+
+
+
+.input-box input:focus + label,
+
+.input-box input:not(:placeholder-shown)+label{
+
+
+    top:-8px;
+
+
+    font-size:12px;
+
+
+    background:white;
+
+
+    padding:0 5px;
+
+
+    color:#2563EB;
+
+
+}
+
+
+
+/* PASSWORD ICON */
+
+
+.eye{
+
+
+    position:absolute;
+
+
+    right:18px;
+
+
+    top:50%;
+
+
+    transform:translateY(-50%);
+
+
+    cursor:pointer;
+
+
+}
+
+
+
+/* OPTIONS */
+
+
+.login-options{
+
+
+    display:flex;
+
+
+    justify-content:space-between;
+
+
+    align-items:center;
+
+
+    margin-bottom:25px;
+
+
+    font-size:14px;
+
+
+}
+
+
+
+.login-options a{
+
+
+    color:#2563EB;
+
+    text-decoration:none;
+
+
+}
+
+
+
+/* BUTTON */
+
+
+.login-btn{
+
+
+    width:100%;
+
+
+    height:52px;
+
+
+    border:none;
+
+
+    border-radius:18px;
+
+
+    cursor:pointer;
+
+
+    color:white;
+
+
+    font-size:17px;
+
+
+    font-weight:600;
+
+
+    background:
+
+    linear-gradient(
+        135deg,
+        #2563EB,
+        #0F62FE
+    );
+
+
+    box-shadow:
+
+    0 10px 25px rgba(37,99,235,.4);
+
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:10px;
+
+
+}
+
+
+
+.login-btn:hover{
+
+
+    transform:translateY(-3px);
+
+
+}
+
+
+
+/* Loader */
+
+
+.spin{
+
+
+    animation:spin 1s linear infinite;
+
+
+}
+
+
+@keyframes spin{
+
+
+    from{
+
+        transform:rotate(0deg);
+
+    }
+
+    to{
+
+        transform:rotate(360deg);
+
+    }
+
+}
+
+
+
+/* REGISTER */
+
+
+.register{
+
+
+    text-align:center;
+
+
+    margin-top:25px;
+
+
+    color:#64748B;
+
+
+}
+
+
+
+.register a{
+
+
+    color:#2563EB;
+
+
+    font-weight:bold;
+
+
+    margin-left:5px;
+
+
+}
+
+
+
+/* FOOTER */
+
+
+footer{
+
+
+    text-align:center;
+
+
+    margin-top:25px;
+
+
+    font-size:13px;
+
+
+    color:#94A3B8;
+
+
+}
+
+
+
+/* RESPONSIVE */
+
+
+@media(max-width:600px){
+
+
+.login-glass{
+
+
+    width:90%;
+
+    padding:30px;
+
+
+}
+
+
+.logo-section h1{
+
+    font-size:26px;
+
+}
+
+
+}
+
+/* Error message */
+.login-error {
+    background: rgba(239, 68, 68, 0.15);
+    border: 1px solid rgba(239, 68, 68, 0.4);
+    color: #fca5a5;
+    padding: 10px 14px;
+    border-radius: 8px;
+    font-size: 14px;
+    margin-top: 10px;
+    text-align: center;
+}
