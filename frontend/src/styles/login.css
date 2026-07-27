@@ -5,17 +5,21 @@
     font-family:"Inter","Poppins",Arial,sans-serif;
 }
 
-
 body{
-    overflow:hidden;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
+
 
 
 /* MAIN BACKGROUND */
 
 .premium-login{
 
-    min-height:100vh;
+    .premium-login {
+    min-height: 100vh;
+    padding: 20px 0;
+}
     display:flex;
     justify-content:center;
     align-items:center;
@@ -139,12 +143,12 @@ body{
 .login-glass{
 
 
-    width:430px;
-
-    padding:40px;
-
-
-    border-radius:30px;
+    .login-glass{
+    width:390px;
+    padding:22px;
+    max-height:90vh;
+    overflow-y:auto;
+}
 
 
     background:
@@ -254,7 +258,7 @@ body{
 
 
     width:70px;
-    height:70px;
+    height: 50px;
 
     object-fit:contain;
 
